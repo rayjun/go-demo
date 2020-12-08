@@ -13,7 +13,6 @@ type T struct {
 	S string
 }
 
-
 func (t *T) M() {
 	fmt.Println(t.S)
 }
@@ -24,25 +23,18 @@ func (f F) M() {
 	fmt.Println(f)
 }
 
+// 接口的值可以被认为是值和真实类型的组合
+func describe(i I) {
+	fmt.Printf("(%v, %T)\n", i, i)
+}
 
 func main() {
 	var i I
-
 	i = &T{"Hello"}
 	describe(i)
-
 	i.M()
 
 	i = F(math.Pi)
 	describe(i)
-
 	i.M()
-
-
-
-}
-
-
-func describe(i I) {
-	fmt.Printf("(%v, %T)\n", i, i)
 }

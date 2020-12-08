@@ -1,14 +1,15 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
+// 对于数值类型，0 是默认值
+// 对于布尔类型，false 是默认值
+// 对于字符串，"" 是默认值
 
 func main() {
 	var i int
 	var f float64
 	var b bool
 	var s string
-	fmt.Println("%v, %v,%v, %q\n", i, f, b, s)
+	fmt.Printf("%v %v %v %q\n", i, f, b, s)
 }

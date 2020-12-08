@@ -1,15 +1,11 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-
-var c , python, java bool
-
+// 声明变量
+var c, python, java bool
 
 func main() {
 	var i int
-
-	fmt.Println(i,c,python, java)
+	fmt.Println(i, c, python, java)
 }

@@ -5,13 +5,10 @@ import (
 )
 
 func fibonacci() func() int {
-
-	a,b := 0,1
-
+	a, b := 0, 1
 	return func() int {
-		b = a+b
+		b = a + b
 		a = b - a
-
 		return a
 	}
 }
@@ -19,7 +16,7 @@ func fibonacci() func() int {
 func main() {
 	f := fibonacci()
 
-	for i := 0 ; i < 10; i++ {
+	for i := 0; i < 10; i++ {
 		fmt.Println(f())
 	}
 }
