@@ -1,23 +1,17 @@
 package main
 
-
-
-
 import "golang.org/x/tour/reader"
 
+type MyReader struct{}
 
-type MyReader struct {}
+func (r MyReader) Read(bytes []byte) (int, error) {
 
-
-
-func (mr MyReader) Read(b []byte) (int, error) {
-	for i := range b {
-		b[i] = 'A'
+	for i := range bytes {
+		bytes[i] = 65
 	}
 
-	return len(b), nil
+	return len(bytes), nil
 }
-
 
 func main() {
 	reader.Validate(MyReader{})

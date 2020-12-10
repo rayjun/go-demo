@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 type I interface {
 	M()
@@ -11,10 +9,9 @@ type I interface {
 func main() {
 	var i I
 	describe(i)
-	i.M()
+	i.M() // 会报运行时异常，接口必须要能绑定特定的类型才能进行方法调用
 }
 
-
 func describe(i I) {
-	fmt.Printf("(%v, %T)\n", i, i)
+	fmt.Println("(%v, %T)\n", i, i)
 }

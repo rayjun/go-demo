@@ -7,33 +7,29 @@ import (
 )
 
 type SafeCounter struct {
-	v map[string]int
-	mux sync.Mutex
+	mu sync.Mutex
+	v  map[string]int
 }
 
-
 func (c *SafeCounter) Inc(key string) {
-	c.mux.Lock()
+	c.mu.Lock()
 	c.v[key]++
-	c.mux.Unlock()
+	c.mu.Unlock()
 }
 
 func (c *SafeCounter) Value(key string) int {
-	c.mux.Lock()
-
-	defer c.mux.Unlock()
+	c.mu.Lock()
+	defer c.mu.Unlock()
 	return c.v[key]
 }
 
-
+// Go 语言中的锁
 func main() {
 	c := SafeCounter{v: make(map[string]int)}
 
-	for i:= 0; i < 1000;i++ {
-		go c.Inc("ray")
+	for i := 0; i < 1000; i++ {
+		go c.Inc("somekey")
 	}
-
 	time.Sleep(time.Second)
-
-	fmt.Println(c.Value("ray"))
+	fmt.Println(c.Value("somekey"))
 }
