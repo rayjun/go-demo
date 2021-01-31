@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"go-demo/the_go_programming_language/ch4/github"
 	"log"
 	"os"
+
+	"rayjun.cn/godemo/the_go_programming_language/ch4/github"
 )
 
 func main() {

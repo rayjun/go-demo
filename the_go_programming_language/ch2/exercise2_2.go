@@ -3,11 +3,12 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"go-demo/the_go_programming_language/ch2/lengthconv"
-	"go-demo/the_go_programming_language/ch2/tempconv"
-	"go-demo/the_go_programming_language/ch2/weightconv"
 	"os"
 	"strconv"
+
+	"rayjun.cn/godemo/the_go_programming_language/ch2/lengthconv"
+	"rayjun.cn/godemo/the_go_programming_language/ch2/tempconv"
+	"rayjun.cn/godemo/the_go_programming_language/ch2/weightconv"
 )
 
 func main() {

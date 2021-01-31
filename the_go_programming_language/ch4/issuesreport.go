@@ -1,11 +1,12 @@
 package main
 
 import (
-	"go-demo/the_go_programming_language/ch4/github"
 	"log"
 	"os"
 	"text/template"
 	"time"
+
+	"rayjun.cn/godemo/the_go_programming_language/ch4/github"
 )
 
 const templ = `{{.TotalCount}} issues:

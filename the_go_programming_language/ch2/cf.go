@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"go-demo/the_go_programming_language/ch2/tempconv"
 	"os"
 	"strconv"
+
+	"rayjun.cn/godemo/the_go_programming_language/ch2/tempconv"
 )
 
 func main() {

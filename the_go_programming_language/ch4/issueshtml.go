@@ -1,11 +1,12 @@
 package main
 
 import (
-	"go-demo/the_go_programming_language/ch4/github"
 	"html/template"
 	"log"
 	"os"
 	"time"
+
+	"rayjun.cn/godemo/the_go_programming_language/ch4/github"
 )
 
 func daysAgo(t time.Time) int {

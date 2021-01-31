@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"go-demo/the_go_programming_language/ch2/popcount"
 	"time"
+
+	"rayjun.cn/godemo/the_go_programming_language/ch2/popcount"
 )
 
 func main() {
